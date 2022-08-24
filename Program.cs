@@ -3,75 +3,81 @@
 // [345, 897, 568, 234] -> 2
 Console.Clear();
 
-// int[] CreateRandomArray(int N, int start, int end)   //готовая функция рандом массива
-// {
-//     int[] array = new int[N];
-//     for (int i = 0; i < N; i++)
-//     {
-//         array[i] = new Random().Next(start, end + 1);
-//     }
-//     return array;
-// }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// void ShowArray(int[] array)                         //функция вывода массива
-// {
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         Console.Write(array[i] + " ");
-//     }
-//     Console.WriteLine();
-// }
+int[] CreateRandomArray(int N, int start, int end)   //готовая функция рандом массива
+{
+    int[] array = new int[N];
+    for (int i = 0; i < N; i++)
+    {
+        array[i] = new Random().Next(start, end + 1);
+    }
+    return array;
+}
 
-// Console.WriteLine("Введите количество элементов в массиве");
-// int num = Convert.ToInt32(Console.ReadLine());
+void ShowArray(int[] array)                         //функция вывода массива
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.WriteLine();
+}
 
-// Console.WriteLine("Enter the number of start filling array by random numbers by three digit min"); //введите трёхзначное число для нижнего диапазона массива
-// int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество элементов в массиве");
+int num = Convert.ToInt32(Console.ReadLine());
 
-// if (min < 100 || min > 999) //проверка на трёхзначность
-// {
-//     do
-//     {
-//     Console.WriteLine ("Wrong number!Enter the number from 100 to 999: ");
-//     Int32.TryParse(Console.ReadLine(), out min);
-//     } while (min < 100 || min > 999);
-// }  
+Console.WriteLine("Enter the number of start filling array by random numbers by three digit min"); //введите трёхзначное число для нижнего диапазона массива
+int min = Convert.ToInt32(Console.ReadLine());
 
-
-// Console.WriteLine("Enter the number of end filling array by random numbers by three digit max"); //введите трёхзначное число для верхнего диапазона массива
-// int max = Convert.ToInt32(Console.ReadLine());
-
-// if (max < 100 || max > 999) //проверка на трёхзначность
-// {
-//     do
-//     {
-//     Console.WriteLine ("Wrong number!Enter the number from 100 to 999: ");
-//     Int32.TryParse(Console.ReadLine(), out max);
-//     } while (max < 100 || max > 999);
-// }  
+if (min < 100 || min > 999) //проверка на трёхзначность
+{
+    do
+    {
+    Console.WriteLine ("Wrong number!Enter the number from 100 to 999: ");
+    Int32.TryParse(Console.ReadLine(), out min);
+    } while (min < 100 || min > 999);
+}  
 
 
-// int[] array = CreateRandomArray(num, min, max);
+Console.WriteLine("Enter the number of end filling array by random numbers by three digit max"); //введите трёхзначное число для верхнего диапазона массива
+int max = Convert.ToInt32(Console.ReadLine());
 
-// ShowArray(array);
-
-// int count = 0;
-
-// for ( int i = 0; i < array.Length; i++)
-// {
-//     if (array[i]  % 2 == 0)
-//     count++;
-// }
-// Console.WriteLine($"Summ of even numbers in the array is:  {count}");
-
+if (max < 100 || max > 999) //проверка на трёхзначность
+{
+    do
+    {
+    Console.WriteLine ("Wrong number!Enter the number from 100 to 999: ");
+    Int32.TryParse(Console.ReadLine(), out max);
+    } while (max < 100 || max > 999);
+}  
 
 
+int[] array = CreateRandomArray(num, min, max);
+
+ShowArray(array);
+
+int count = 0;
+
+for ( int i = 0; i < array.Length; i++)
+{
+    if (array[i]  % 2 == 0)
+    count++;
+}
+Console.WriteLine($"Summ of even numbers in the array is:  {count}");
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
 
 // [3, 7, 23, 12] -> 19
 
 // [-4, -6, 89, 6] -> 0
+
+
 
 // int[] CreateRandomArray(int N, int start, int end)   //готовая функция рандом массива
 // {
@@ -107,44 +113,49 @@ Console.Clear();
 
 
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
 // [3 7 22 2 78] -> 76
 
 
-int[] CreateRandomArray(int N, int start, int end)   //готовая функция рандом массива
-{
-    int[] array = new int[N];
-    for (int i = 0; i < N; i++)
-    {
-        array[i] = new Random().Next(start, end + 1);
-    }
-    return array;
-}
 
-void ShowArray(int[] array)                         //функция вывода массива
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine();
-}
 
-int[] array = CreateRandomArray(10, 1, 100);
+// int[] CreateRandomArray(int N, int start, int end)   //готовая функция рандом массива
+// {
+//     int[] array = new int[N];
+//     for (int i = 0; i < N; i++)
+//     {
+//         array[i] = new Random().Next(start, end + 1);
+//     }
+//     return array;
+// }
 
-ShowArray(array);
+// void ShowArray(int[] array)                         //функция вывода массива
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
-int max = array[0];
-    int min = array[0];
-for (int i = 0; i < array.Length; i++)
-{
-    if (array[i]>max)
-    max = array[i];
-    if (array[i]<min)
-    min = array[i];
-}
-int diff = max - min;
-Console.WriteLine($"Difference betvene min & max elements is: {diff}"); //SORRY FOR MY ИНГЛИШ (((:
+// int[] array = CreateRandomArray(10, 1, 100);
 
-// Have a nice day!
+// ShowArray(array);
+
+// int max = array[0];
+//     int min = array[0];
+// for (int i = 0; i < array.Length; i++)
+// {
+//     if (array[i]>max)
+//     max = array[i];
+//     if (array[i]<min)
+//     min = array[i];
+// }
+// int diff = max - min;
+// Console.WriteLine($"Difference betvene min & max elements is: {diff}"); //SORRY FOR MY ИНГЛИШ (((:
+
+// // Have a nice day!
